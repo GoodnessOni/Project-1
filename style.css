@@ -35,3 +35,8 @@ a:hover ,a:active{
  h1{
     color: crimson;
  }
+
+
+body {
+  overflow-x: auto;
+}
