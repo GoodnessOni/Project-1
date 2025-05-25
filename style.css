@@ -36,6 +36,29 @@ a:hover ,a:active{
     color: crimson;
  }
 
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+    font-size: 18px;
+  }
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+  th, td {
+    box-sizing: border-box;
+    width: 100%;
+    word-break: break-word;
+  }
+  /* Optional: Make table horizontally scrollable instead */
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+  table {
+    min-width: 400px; /* or whatever your table's natural width is */
+  }
+}
 
 body {
   overflow-x: auto;
