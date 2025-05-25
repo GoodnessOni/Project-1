@@ -36,15 +36,13 @@ a:hover ,a:active{
     color: crimson;
  }
 
-.table-responsive {
-  width: 100%;
-  overflow-x: auto;
+body {
+    overflow-x: auto;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  /* You can add more table styles here */
+table, th, td {
+    word-break: break-word;
+    max-width: 100%;
 }
 
 @media (max-width: 600px) {
