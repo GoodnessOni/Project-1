@@ -1,21 +1,8 @@
-:root {
-    --primary-color: crimson;
-    --secondary-color: black;
-    --border-color: burlywood;
-    --text-color: whitesmoke;
-    --table-border: #333;
-    --link-color: #4f8cff;
-    --visited-link-color: #90a8ff;
-    --hover-link-color: #ff0095;
-}
-
-html {
-    font-size: 23px;
-}
-
 body {
     min-height: 100vh;
     max-width: 800px;
+    width: 100%;
+    min-width: 0;
     margin: 0 auto;
     padding: 1rem;
     border-left: 1px solid var(--border-color);
@@ -23,6 +10,9 @@ body {
     background-color: var(--secondary-color);
     color: var(--text-color);
     font-family: 'Segoe UI', 'Arial', sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
 }
 
 th, td, caption {
@@ -30,32 +20,10 @@ th, td, caption {
     font-family: 'Courier New', Courier, monospace;
     border-collapse: separate;
     padding: 0.5rem;
-}
-
-a {
-    color: var(--link-color);
-    transition: color 0.3s ease, outline 0.2s;
-    outline: none;
-}
-
-a:visited {
-    color: var(--visited-link-color);
-}
-
-a:hover,
-a:active,
-a:focus {
-    color: var(--hover-link-color);
-    outline: 2px dashed var(--hover-link-color);
-    outline-offset: 2px;
-}
-
-h1 {
-    color: var(--primary-color);
-}
-
-.header {
-    color: red;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 /* Responsive adjustments */
@@ -64,4 +32,9 @@ h1 {
         padding: 0.5rem;
         font-size: 18px;
     }
+    th, td, caption {
+        font-size: 14px;
+        padding: 0.25rem;
+    }
 }
+
