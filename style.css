@@ -1,3 +1,14 @@
+:root {
+    --primary-color: crimson;
+    --secondary-color: black;
+    --border-color: burlywood;
+    --text-color: whitesmoke;
+    --table-border: #333;
+    --link-color: #4f8cff;
+    --visited-link-color: #90a8ff;
+    --hover-link-color: #ff0095;
+}
+
 html {
     font-size: 23px;
 }
@@ -7,32 +18,50 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 1rem;
-    border-left: 1px solid burlywood;
-    border-right: 1px solid burlywood;
-    background-color: black;
-    color: whitesmoke;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', 'Arial', sans-serif;
 }
 
 th, td, caption {
-    border: 1px solid #333;
+    border: 1px solid var(--table-border);
     font-family: 'Courier New', Courier, monospace;
     border-collapse: separate;
     padding: 0.5rem;
 }
 
-a{
-    color: blue;
-}
-a:visited{
-    color: rgb(0, 89, 255);
-}
-
-a:hover ,a:active{
-    color: rgb(255, 0, 149);
+a {
+    color: var(--link-color);
+    transition: color 0.3s ease, outline 0.2s;
+    outline: none;
 }
 
+a:visited {
+    color: var(--visited-link-color);
+}
 
- h1{
-    color: crimson;
- }
+a:hover,
+a:active,
+a:focus {
+    color: var(--hover-link-color);
+    outline: 2px dashed var(--hover-link-color);
+    outline-offset: 2px;
+}
 
+h1 {
+    color: var(--primary-color);
+}
+
+.header {
+    color: red;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 0.5rem;
+        font-size: 18px;
+    }
+}
