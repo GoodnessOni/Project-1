@@ -41,9 +41,3 @@ body {
 }
 
 
-
-@media (max-width: 600px) {
-  table, thead, tbody, th, td, tr { 
-    display: block;
-    width: 100%;
-  }
